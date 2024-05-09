@@ -1299,9 +1299,28 @@ There is no Prerequistes for this API
         "data": {
             "eligibility_criteria_info": [
                 {
-                    "request_item_id": 108,
-                    "eligibility_conditions": "",
-                    "eligibility_criteria_line": []
+                    "request_item_id": 107,
+                    "eligibility_conditions": "eligibility conditions goes here",
+                    "eligibility_criteria_line": [
+                        {
+                            "eligibility_criteria_line_id": 128,
+                            "question": "question 1 goes here",
+                            "response": "",
+                            "reviewers_remarks": ""
+                        },
+                        {
+                            "eligibility_criteria_line_id": 129,
+                            "question": "question 3",
+                            "response": "",
+                            "reviewers_remarks": ""
+                        },
+                        {
+                            "eligibility_criteria_line_id": 130,
+                            "question": "question 2",
+                            "response": "",
+                            "reviewers_remarks": ""
+                        }
+                    ]
                 }
             ]
         }
