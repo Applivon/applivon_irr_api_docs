@@ -1,5 +1,10 @@
 # IRRC Mobile API Documentation
 
+Postman Collection :
+```
+https://api.postman.com/collections/15976179-ded2f6f7-77ab-4d81-abba-aecdbb04b3cb?access_key=PMAT-01HQAK34VJQRJC3HPCJTFYM8HK
+```
+
 - [Authentication API](#authentication-apis)
      - [Auth Encrypted API](#auth-encrypted-api)
        - [Login](#login-api)
