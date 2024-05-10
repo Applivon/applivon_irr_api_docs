@@ -608,19 +608,18 @@ In the request URL, provide the following query parameters with values.
             "count": 3,
             "requests_list": [
                 {
-                    "request_id": -1,
-                    "request_item_id": 5,
-                    "partner_id": -1,
-                    "partner_name": "",
-                    "partner_phone": "",
-                    "partner_mobile": "",
-                    "partner_email": "",
-                    "partner_street": "",
-                    "partner_street2": "",
-                    "partner_city": "",
-                    "partner_state_id": "",
-                    "partner_zip": "",
-                    "partner_country_id": "",
+                    "request_id": 5,
+                    "contact_id": -1,
+                    "contact_name": "",
+                    "contact_phone": "",
+                    "contact_mobile": "",
+                    "contact_email": "",
+                    "contact_street": "",
+                    "contact_street2": "",
+                    "contact_city": "",
+                    "contact_state_id": "",
+                    "contact_zip": "",
+                    "contact_country_id": "",
                     "request_ref": "RQ24030003-01",
                     "submission_date": "18/03/2024",
                     "responsible_id": -1,
@@ -642,22 +641,42 @@ In the request URL, provide the following query parameters with values.
                     "collection_point_id": 3,
                     "collection_point_name": "InspIRRe Store",
                     "collection_point_details": "",
-                    "collection_appt": ""
+                    "collection_appt": "",
+                    "eligibility_conditions": "eligibility conditions goes here",
+                    "eligibility_criteria_line": [
+                        {
+                            "eligibility_criteria_line_id": 128,
+                            "question": "question 1 goes here",
+                            "response": "",
+                            "reviewers_remarks": ""
+                        },
+                        {
+                            "eligibility_criteria_line_id": 129,
+                            "question": "question 3",
+                            "response": "",
+                            "reviewers_remarks": ""
+                        },
+                        {
+                            "eligibility_criteria_line_id": 130,
+                            "question": "question 2",
+                            "response": "",
+                            "reviewers_remarks": ""
+                        }
+                    ]
                 },
                 {
-                    "request_id": -1,
-                    "request_item_id": 6,
-                    "partner_id": -1,
-                    "partner_name": "",
-                    "partner_phone": "",
-                    "partner_mobile": "",
-                    "partner_email": "",
-                    "partner_street": "",
-                    "partner_street2": "",
-                    "partner_city": "",
-                    "partner_state_id": "",
-                    "partner_zip": "",
-                    "partner_country_id": "",
+                    "request_id": 6,
+                    "contact_id": -1,
+                    "contact_name": "",
+                    "contact_phone": "",
+                    "contact_mobile": "",
+                    "contact_email": "",
+                    "contact_street": "",
+                    "contact_street2": "",
+                    "contact_city": "",
+                    "contact_state_id": "",
+                    "contact_zip": "",
+                    "contact_country_id": "",
                     "request_ref": "RQ24030004-01",
                     "submission_date": "20/03/2024",
                     "responsible_id": -1,
@@ -679,22 +698,42 @@ In the request URL, provide the following query parameters with values.
                     "collection_point_id": 3,
                     "collection_point_name": "InspIRRe Store",
                     "collection_point_details": "",
-                    "collection_appt": "21/03/2024 06:00:00"
+                    "collection_appt": "21/03/2024 06:00:00",
+                    "eligibility_conditions": "eligibility conditions goes here",
+                    "eligibility_criteria_line": [
+                        {
+                            "eligibility_criteria_line_id": 128,
+                            "question": "question 1 goes here",
+                            "response": "",
+                            "reviewers_remarks": ""
+                        },
+                        {
+                            "eligibility_criteria_line_id": 129,
+                            "question": "question 3",
+                            "response": "",
+                            "reviewers_remarks": ""
+                        },
+                        {
+                            "eligibility_criteria_line_id": 130,
+                            "question": "question 2",
+                            "response": "",
+                            "reviewers_remarks": ""
+                        }
+                    ]
                 },
                 {
-                    "request_id": -1,
-                    "request_item_id": 13,
-                    "partner_id": -1,
-                    "partner_name": "",
-                    "partner_phone": "",
-                    "partner_mobile": "",
-                    "partner_email": "",
-                    "partner_street": "",
-                    "partner_street2": "",
-                    "partner_city": "",
-                    "partner_state_id": "",
-                    "partner_zip": "",
-                    "partner_country_id": "",
+                    "request_id": 13,
+                    "contact_id": -1,
+                    "contact_name": "",
+                    "contact_phone": "",
+                    "contact_mobile": "",
+                    "contact_email": "",
+                    "contact_street": "",
+                    "contact_street2": "",
+                    "contact_city": "",
+                    "contact_state_id": "",
+                    "contact_zip": "",
+                    "contact_country_id": "",
                     "request_ref": "RQ24030004-02",
                     "submission_date": "28/03/2024",
                     "responsible_id": -1,
@@ -716,7 +755,9 @@ In the request URL, provide the following query parameters with values.
                     "collection_point_id": -1,
                     "collection_point_name": "",
                     "collection_point_details": "",
-                    "collection_appt": ""
+                    "collection_appt": "",
+                    "eligibility_conditions": "eligibility conditions goes here",
+                    "eligibility_criteria_line": []
                 }
             ]
         }
@@ -792,18 +833,18 @@ In the request URL, provide the following query parameters with values.
             "count": 2,
             "requests_list": [
                 {
-                    "request_item_id": 57,
-                    "partner_id": -1,
-                    "partner_name": "",
-                    "partner_phone": "",
-                    "partner_mobile": "",
-                    "partner_email": "",
-                    "partner_street": "",
-                    "partner_street2": "",
-                    "partner_city": "",
-                    "partner_state_id": "",
-                    "partner_zip": "",
-                    "partner_country_id": "",
+                    "request_id": 57,
+                    "contact_id": -1,
+                    "contact_name": "",
+                    "contact_phone": "",
+                    "contact_mobile": "",
+                    "contact_email": "",
+                    "contact_street": "",
+                    "contact_street2": "",
+                    "contact_city": "",
+                    "contact_state_id": "",
+                    "contact_zip": "",
+                    "contact_country_id": "",
                     "request_ref": "RQ24040031-01",
                     "submission_date": "16/04/2024",
                     "responsible_id": 10,
@@ -825,21 +866,42 @@ In the request URL, provide the following query parameters with values.
                     "collection_point_id": 3,
                     "collection_point_name": "InspIRRe Store",
                     "collection_point_details": "",
-                    "collection_appt": ""
+                    "collection_appt": "",
+                    "eligibility_conditions": "eligibility conditions goes here",
+                    "eligibility_criteria_line": [
+                        {
+                            "eligibility_criteria_line_id": 128,
+                            "question": "question 1 goes here",
+                            "response": "",
+                            "reviewers_remarks": ""
+                        },
+                        {
+                            "eligibility_criteria_line_id": 129,
+                            "question": "question 3",
+                            "response": "",
+                            "reviewers_remarks": ""
+                        },
+                        {
+                            "eligibility_criteria_line_id": 130,
+                            "question": "question 2",
+                            "response": "",
+                            "reviewers_remarks": ""
+                        }
+                    ]
                 },
                 {
-                    "request_item_id": 58,
-                    "partner_id": -1,
-                    "partner_name": "",
-                    "partner_phone": "",
-                    "partner_mobile": "",
-                    "partner_email": "",
-                    "partner_street": "",
-                    "partner_street2": "",
-                    "partner_city": "",
-                    "partner_state_id": "",
-                    "partner_zip": "",
-                    "partner_country_id": "",
+                    "request_id": 58,
+                    "contact_id": -1,
+                    "contact_name": "",
+                    "contact_phone": "",
+                    "contact_mobile": "",
+                    "contact_email": "",
+                    "contact_street": "",
+                    "contact_street2": "",
+                    "contact_city": "",
+                    "contact_state_id": "",
+                    "contact_zip": "",
+                    "contact_country_id": "",
                     "request_ref": "RQ24040031-02",
                     "submission_date": "16/04/2024",
                     "responsible_id": 10,
@@ -861,7 +923,9 @@ In the request URL, provide the following query parameters with values.
                     "collection_point_id": 3,
                     "collection_point_name": "InspIRRe Store",
                     "collection_point_details": "",
-                    "collection_appt": ""
+                    "collection_appt": "",
+                    "eligibility_conditions": "eligibility conditions goes here",
+                    "eligibility_criteria_line": []
                 }
             ]
         }
@@ -938,18 +1002,18 @@ In the request URL, provide the following query parameters with values.
             "count": 2,
             "requests_list": [
                 {
-                    "request_item_id": 57,
-                    "partner_id": -1,
-                    "partner_name": "",
-                    "partner_phone": "",
-                    "partner_mobile": "",
-                    "partner_email": "",
-                    "partner_street": "",
-                    "partner_street2": "",
-                    "partner_city": "",
-                    "partner_state_id": "",
-                    "partner_zip": "",
-                    "partner_country_id": "",
+                    "request_id": 57,
+                    "contact_id": -1,
+                    "contact_name": "",
+                    "contact_phone": "",
+                    "contact_mobile": "",
+                    "contact_email": "",
+                    "contact_street": "",
+                    "contact_street2": "",
+                    "contact_city": "",
+                    "contact_state_id": "",
+                    "contact_zip": "",
+                    "contact_country_id": "",
                     "request_ref": "RQ24040031-01",
                     "submission_date": "16/04/2024",
                     "responsible_id": 10,
@@ -971,21 +1035,42 @@ In the request URL, provide the following query parameters with values.
                     "collection_point_id": 3,
                     "collection_point_name": "InspIRRe Store",
                     "collection_point_details": "",
-                    "collection_appt": ""
+                    "collection_appt": "",
+                    "eligibility_conditions": "eligibility conditions goes here",
+                    "eligibility_criteria_line": [
+                        {
+                            "eligibility_criteria_line_id": 128,
+                            "question": "question 1 goes here",
+                            "response": "",
+                            "reviewers_remarks": ""
+                        },
+                        {
+                            "eligibility_criteria_line_id": 129,
+                            "question": "question 3",
+                            "response": "",
+                            "reviewers_remarks": ""
+                        },
+                        {
+                            "eligibility_criteria_line_id": 130,
+                            "question": "question 2",
+                            "response": "",
+                            "reviewers_remarks": ""
+                        }
+                    ]
                 },
                 {
-                    "request_item_id": 58,
-                    "partner_id": -1,
-                    "partner_name": "",
-                    "partner_phone": "",
-                    "partner_mobile": "",
-                    "partner_email": "",
-                    "partner_street": "",
-                    "partner_street2": "",
-                    "partner_city": "",
-                    "partner_state_id": "",
-                    "partner_zip": "",
-                    "partner_country_id": "",
+                    "request_id": 58,
+                    "contact_id": -1,
+                    "contact_name": "",
+                    "contact_phone": "",
+                    "contact_mobile": "",
+                    "contact_email": "",
+                    "contact_street": "",
+                    "contact_street2": "",
+                    "contact_city": "",
+                    "contact_state_id": "",
+                    "contact_zip": "",
+                    "contact_country_id": "",
                     "request_ref": "RQ24040031-02",
                     "submission_date": "16/04/2024",
                     "responsible_id": 10,
@@ -1007,7 +1092,9 @@ In the request URL, provide the following query parameters with values.
                     "collection_point_id": 3,
                     "collection_point_name": "InspIRRe Store",
                     "collection_point_details": "",
-                    "collection_appt": ""
+                    "collection_appt": "",
+                    "eligibility_conditions": "eligibility conditions goes here",
+                    "eligibility_criteria_line": []
                 }
             ]
         }
@@ -1048,8 +1135,7 @@ In the request URL, provide the following query parameters with values.
 |:----------|:-----|:------------|
 |reviewers_remarks|String|Reviewers rejection remark|
 Optional Parameter
-|request_id|String|Request unique id|
-|request_item_id|Integer|Request item unique id for rejection |
+|request_id|Integer|Request unique id for rejection |
 
 
 ### Example
@@ -1059,7 +1145,7 @@ Optional Parameter
 ```
 {
   "params": {
-    "request_item_id": 93,
+    "request_id": 93,
     "reviewers_remarks": "test rejection"
   }
 }
@@ -1116,8 +1202,7 @@ In the request URL, provide the following query parameters with values.
 |:----------|:-----|:------------|
 |cancel_reason|String|Cancellation  remark|
 Optional Parameter
-|request_id|String|Request unique id|
-|request_item_id|Integer|Request item unique id for rejection |
+|request_id|Integer|Request item unique id for rejection |
 
 
 ### Example
@@ -1127,7 +1212,7 @@ Optional Parameter
 ```
 {
   "params": {
-    "request_item_id": 93,
+    "request_id": 93,
     "cancel_reason": "test cancellation"
   }
 }
@@ -1179,8 +1264,7 @@ There is no Prerequistes for this API
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
 Optional Parameter
-|request_id|String|Request unique id for availability|
-|request_item_id|Integer|Request item unique id for Item availability |
+|request_id|Integer|Request item unique id for Item availability |
 
 
 ### Example
@@ -1190,8 +1274,7 @@ Optional Parameter
 ```
 {
   "params": {
-    "request_id": 54,
-    "request_item_id": 93
+    "request_id": 54
   }
 }
 
@@ -1248,11 +1331,9 @@ Optional Parameter
 ### Remarks
 
 
+### TO GET COLLECTION POINT DETAILS API
 
-
-### TO GET REQUEST ITEM ELIGIBILITY API
-
-To Get Request Item Eligibility Details.
+Get Collection Point Values.
 
 ### Prerequisites
 There is no Prerequistes for this API
@@ -1260,7 +1341,7 @@ There is no Prerequistes for this API
 ### HTTP Request
 
 ```
-/irrc/get_request_items_eligibility_list
+/irrc/get_collection_point_details
 ```
 
 ### Request headers
@@ -1274,7 +1355,6 @@ There is no Prerequistes for this API
 
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
-|request_item_id|Integer|Request item unique id for Item eligibility|
 
 
 ### Example
@@ -1283,9 +1363,7 @@ There is no Prerequistes for this API
 
 ```
 {
-  "params": {
-    "request_item_id": 93
-  }
+    "params": {}
 }
 
 ```
@@ -1302,30 +1380,18 @@ There is no Prerequistes for this API
             "message": ""
         },
         "data": {
-            "eligibility_criteria_info": [
+            "collection_points_list": [
                 {
-                    "request_item_id": 107,
-                    "eligibility_conditions": "eligibility conditions goes here",
-                    "eligibility_criteria_line": [
-                        {
-                            "eligibility_criteria_line_id": 128,
-                            "question": "question 1 goes here",
-                            "response": "",
-                            "reviewers_remarks": ""
-                        },
-                        {
-                            "eligibility_criteria_line_id": 129,
-                            "question": "question 3",
-                            "response": "",
-                            "reviewers_remarks": ""
-                        },
-                        {
-                            "eligibility_criteria_line_id": 130,
-                            "question": "question 2",
-                            "response": "",
-                            "reviewers_remarks": ""
-                        }
-                    ]
+                    "id": 1,
+                    "name": "HQ"
+                },
+                {
+                    "id": 2,
+                    "name": "Tampines Grande"
+                },
+                {
+                    "id": 3,
+                    "name": "InspIRRe Store"
                 }
             ]
         }
@@ -1334,7 +1400,6 @@ There is no Prerequistes for this API
 ```
 
 ### Remarks
-
 
 
 ### TO UPDATE REQUEST BENEFICIARY API
@@ -1379,8 +1444,7 @@ There is no Prerequistes for this API
 |languages_known_line|Array| Array of languages know|
 
 Optional Parameter
-|request_id|String|Request unique id for beneficiary|
-|request_item_id|Integer|Request item unique id for Item eligibility|
+|contact_id|Integer|Contact Person unique id
 
 
 ### Example
@@ -1390,7 +1454,7 @@ Optional Parameter
 ```
 {
   "params": {
-    "request_id": 12,
+    "contact_id": 12,
     "name": "test user",
     "phone": "12345678",
     "mobile": "87654321",
@@ -1424,7 +1488,7 @@ Optional Parameter
     "result": {
         "meta": {
             "status": true,
-            "message": "Beneficiary Details updated Successfully!"
+            "message": "Contact Person Details updated Successfully!"
         },
         "data": {}
     }
@@ -1481,7 +1545,6 @@ There is no Prerequistes for this API
 {
     "params": {
         "request_id": 51,
-        "request_item_id": 93,
         "item_to_allocate_id": 5,
         "tag_ids": [
             1,
@@ -1542,7 +1605,6 @@ There is no Prerequistes for this API
 
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
-|request_item_id|Integer|Request item unique id for Item eligibility|
 
 
 ### Example
@@ -1850,9 +1912,9 @@ There is no Prerequistes for this API
 
 ### Request body
 
-| Parameter | Type | Description |
-|:----------|:-----|:------------|
-|request_item_id|Integer|Request item unique id for Item eligibility|
+| Parameter  | Type | Description              |
+|:-----------|:-----|:-------------------------|
+| contact_id |Integer| Contact Person unique id |
 
 
 ### Example
@@ -1932,8 +1994,6 @@ There is no Prerequistes for this API
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
 |request_id|String|Request unique id for beneficiary|
-OR
-|request_item_id|Integer|Request item unique id for Item eligibility|
 
 
 ### Example
@@ -1943,8 +2003,7 @@ OR
 ```
 {
   "params": {
-    "request_id": 93,
-    "request_item_id": 93
+    "request_id": 93
   }
 }
 
@@ -2104,8 +2163,6 @@ There is no Prerequistes for this API
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
 |donation_id|String|Donation unique id for beneficiary|
-OR
-|donation_item_id|Integer|Donation item unique id for Donation Item|
 
 
 ### Example
@@ -2115,8 +2172,7 @@ OR
 ```
 {
   "params": {
-    "donation_id": 58,
-    "donation_item_id": 58
+    "donation_id": 58
   }
 }
 
@@ -2312,19 +2368,18 @@ There is no Prerequistes for this API
             "count": 1,
             "donations_list": [
                 {
-                    "donation_id": -1,
-                    "donation_item_id": 68,
-                    "partner_id": 8,
-                    "partner_name": "ABC Pte Ltd",
-                    "partner_phone": "",
-                    "partner_mobile": "",
-                    "partner_email": "",
-                    "partner_street": "",
-                    "partner_street2": "",
-                    "partner_city": "",
-                    "partner_state_id": "",
-                    "partner_zip": "",
-                    "partner_country_id": "",
+                    "donation_id": 68,
+                    "contact_id": 8,
+                    "contact_name": "ABC Pte Ltd",
+                    "contact_phone": "",
+                    "contact_mobile": "",
+                    "contact_email": "",
+                    "contact_street": "",
+                    "contact_street2": "",
+                    "contact_city": "",
+                    "contact_state_id": "",
+                    "contact_zip": "",
+                    "contact_country_id": "",
                     "donations_ref": "DI24050008-01",
                     "submission_date": "07/05/2024",
                     "responsible_id": 26,
@@ -2377,8 +2432,7 @@ There is no Prerequistes for this API
 |:----------|:-----|:------------|
 |reviewers_remarks|String|Reviewers rejection remark|
 Optional Parameter
-|donation_id|String|Request unique id|
-|donation_item_id|Integer|Request item unique id for rejection |
+|donation_id|Integer|Request unique id for rejection |
 
 
 ### Example
@@ -2388,7 +2442,7 @@ Optional Parameter
 ```
 {
   "params": {
-    "donation_item_id": 93,
+    "donation_id": 93,
     "reviewers_remarks": "test donation rejection"
   }
 }
@@ -2443,8 +2497,7 @@ There is no Prerequistes for this API
 |:----------|:-----|:------------|
 |cancel_reason|String|Cancel reason for donation|
 Optional Parameter
-|donation_id|String|Request unique id|
-|donation_item_id|Integer|Request item unique id for rejection |
+|donation_id|Integer|Request unique id for rejection |
 
 
 ### Example
@@ -2454,7 +2507,7 @@ Optional Parameter
 ```
 {
   "params": {
-    "donation_item_id": 93,
+    "donation_id": 93,
     "cancel_reason": "test donation cancel"
   }
 }
@@ -2514,8 +2567,7 @@ There is no Prerequistes for this API
 |collection_point_id|Integer|Collection point unique Id for donation|
 |tag_ids|Array|Cancel reason for donation|
 Optional Parameter
-|donation_id|String|Request unique id|
-|donation_item_id|Integer|Request item unique id for rejection |
+|donation_id|Integer|Request unique id for rejection |
 
 
 ### Example
@@ -2526,7 +2578,6 @@ Optional Parameter
 {
     "params": {
         "donation_id": 23,
-        "donation_item_id": 58,
         "product_id": 5,
         "tag_ids": [
             1,
