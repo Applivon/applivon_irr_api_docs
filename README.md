@@ -20,7 +20,7 @@ https://api.postman.com/collections/15976179-ded2f6f7-77ab-4d81-abba-aecdbb04b3c
      - [Reject Specific Item](#to-reject-specific-request-item-api)
      - [Cancel Specific Item](#to-cancel-specific-request-item-api)
      - [Item Availability](#to-get-request-item-availablilty-api)
-     - [Item Eligibility](#to-get-request-item-eligibility-api)
+     - [Collection Point List](#to-get-collection-point-list-api)
      - [Rquest Beneficiary](#to-update-request-beneficiary-api)
      - [Update Item Data](#to-update-request-item-data-api)
 - [Contact Person API](#contact-person-api)
