@@ -1,5 +1,7 @@
 # IRRC Mobile API Documentation
 
+NOTE : ALL THE REQUESTS ARE POST REQUESTS (HTTP POST)
+
 Postman Collection :
 ```
 https://api.postman.com/collections/15976179-ded2f6f7-77ab-4d81-abba-aecdbb04b3cb?access_key=PMAT-01HQAK34VJQRJC3HPCJTFYM8HK
@@ -18,10 +20,11 @@ https://api.postman.com/collections/15976179-ded2f6f7-77ab-4d81-abba-aecdbb04b3c
      - [Tangible Item List](#to-get-list-of-item-tangible-request-api)
      - [List Of Service request](#to-get-list-of-service-request-api)
      - [Reject Specific Item](#to-reject-specific-request-item-api)
+     - [Request Product List](#to-get-request-product-list-api)
      - [Cancel Specific Item](#to-cancel-specific-request-item-api)
      - [Item Availability](#to-get-request-item-availablilty-api)
-     - [Collection Point List](#to-get-collection-point-list-api)
-     - [Rquest Beneficiary](#to-update-request-beneficiary-api)
+     - [Collection Point List](#to-get-collection-point-details-api)
+     - [Request Beneficiary](#to-update-request-beneficiary-api)
      - [Update Item Data](#to-update-request-item-data-api)
 - [Contact Person API](#contact-person-api)
      - [List of Person Title](#to-get-contact-person-title-api)
@@ -33,6 +36,9 @@ https://api.postman.com/collections/15976179-ded2f6f7-77ab-4d81-abba-aecdbb04b3c
           - [Donor Details](#to-get-contact-person-title-api)
 - [Donation Module API](#donation-api)
      - [List Of donation](#to-get-list-of-donations-api)
+     - [Get donation item pictures](#to-get-donation-item-pictures-api)
+     - [Update Donation item pictures](#to-update-donation-item-pictures-api)
+     - [List Of donation products](#to-get-donation-product-list-api)
      - [Reject Specific donation](#to-reject-specific-donation-api)
      - [Cancel Specific donation](#to--cancel-specific-donation-api)
      - [Update donation item data](#to-update-donation-item-data-api)
@@ -211,7 +217,13 @@ There is no Prerequistes for this API
 ##### Response
 
 ```
-
+{
+    "jsonrpc": "2.0",
+    "id": null,
+    "result": ["YOUR ENCRYTED BASE 64 DATA",
+        "16 bit IV Key generated during encryption"
+    ]
+}
 
 ```
 
@@ -460,7 +472,7 @@ OR
 
 ### Remarks
 
-# GET PENDING DONATION REQUEST & COUNT WITH STATUS FILTERATION API
+### GET PENDING DONATION REQUEST & COUNT WITH STATUS FILTERATION API
 
 To get the count of Statuswise Requests/Donations.
 
@@ -767,7 +779,7 @@ In the request URL, provide the following query parameters with values.
 
 ### Remarks
 
-# TO GET LIST OF ITEM TANGIBLE REQUEST API
+### TO GET LIST OF ITEM TANGIBLE REQUEST API
 
 To get the list of Tangible Requests based on Created Date in Ascending Order
 
@@ -1134,7 +1146,6 @@ In the request URL, provide the following query parameters with values.
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
 |reviewers_remarks|String|Reviewers rejection remark|
-Optional Parameter
 |request_id|Integer|Request unique id for rejection |
 
 
@@ -1167,6 +1178,85 @@ Optional Parameter
     }
 }
 
+```
+
+### Remarks
+
+
+### TO GET REQUEST PRODUCT LIST API
+
+Get Request Item Product Selection List
+
+### Prerequisites
+There is no Prerequistes for this API
+
+### HTTP Request
+
+```
+/irrc/get_requests_products_list
+```
+
+### Request parameters
+
+In the request URL, provide the following query parameters with values.
+
+### Request headers
+
+| Name | Value |
+|:-----|:------|
+|Content-Type|application/json|
+|TOKEN|aqsw3sakskwj32kj3k2j33j2j3k23kj2k3j|
+
+### Request body
+
+| Parameter | Type | Description |
+|:----------|:-----|:------------|
+|request_id|Integer|Request id to fetch associated product list|
+
+
+### Example
+
+##### Request
+
+```
+{
+  "params": {
+    "request_id": 93
+  }
+}
+
+```
+
+##### Response
+
+```
+{
+    "jsonrpc": "2.0",
+    "id": null,
+    "result": {
+        "meta": {
+            "status": true,
+            "message": ""
+        },
+        "data": {
+            "products_list": [
+                {
+                    "product_id": 5,
+                    "product_name": "[1212121] Acer 8GB Ram"
+                },
+                {
+                    "product_id": 17,
+                    "product_name": "[LP00001] Laptop 8GB"
+                },
+                {
+                    "product_id": 19,
+                    "product_name": "Test Laptop"
+                }
+            ]
+        },
+        "error": {}
+    }
+}
 ```
 
 ### Remarks
@@ -1442,8 +1532,6 @@ There is no Prerequistes for this API
 |marital_status_key|String| Marital Status of the beneficiary|
 |highest_qualification_key|String| Highest qualification of the beneficiary|
 |languages_known_line|Array| Array of languages know|
-
-Optional Parameter
 |contact_id|Integer|Contact Person unique id
 
 
@@ -1531,10 +1619,8 @@ There is no Prerequistes for this API
 |is_eligible|Boolean|Item eligibility|
 |collection_appt|DATETIME|Collection Date for item|
 |collection_point_id|Integer|Collection point unique id for Collection identification|
-
-|Optional Parameters|
 |request_id|Integer|Request unique id for Item eligibility|
-|collection_point_id|Integer|Request item unique id for Item eligibility|
+
 
 
 ### Example
@@ -2430,9 +2516,9 @@ There is no Prerequistes for this API
 
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
-|reviewers_remarks|String|Reviewers rejection remark|
-Optional Parameter
 |donation_id|Integer|Request unique id for rejection |
+|reviewers_remarks|String|Reviewers rejection remark|
+
 
 
 ### Example
@@ -2471,7 +2557,7 @@ Optional Parameter
 
 
 
-# TO  CANCEL SPECIFIC DONATION API
+#### TO  CANCEL SPECIFIC DONATION API
 
 To Cancel Specific Donation Item
 
@@ -2495,9 +2581,9 @@ There is no Prerequistes for this API
 
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
+|donation_id|Integer|Request unique id for cancel |
 |cancel_reason|String|Cancel reason for donation|
-Optional Parameter
-|donation_id|Integer|Request unique id for rejection |
+
 
 
 ### Example
@@ -2534,6 +2620,206 @@ Optional Parameter
 ### Remarks
 
 
+### TO GET DONATION ITEM PICTURES API
+
+To get Donation Item pictures
+
+### Prerequisites
+There is no Prerequistes for this API
+
+### HTTP Request
+
+```
+/irrc/get_donation_item_pictures
+```
+
+### Request headers
+
+| Name | Value |
+|:-----|:------|
+|Content-Type|application/json|
+|TOKEN|aqsw3sakskwj32kj3k2j33j2j3k23kj2k3j|
+
+### Request body
+
+| Parameter | Type | Description |
+|:----------|:-----|:------------|
+|donation_id|Integer|Request unique id for rejection |
+
+
+### Example
+
+##### Request
+
+```
+{
+  "params": {
+    "donation_id": 95
+  }
+}
+
+```
+
+##### Response
+
+```
+{
+    "jsonrpc": "2.0",
+    "id": null,
+    "result": {
+        "meta": {
+            "status": true,
+            "message": ""
+        },
+        "data": {
+            "attachments_list": [
+                "http://localhost:8704/web/content/813",
+                "http://localhost:8704/web/content/814"
+            ]
+        }
+    }
+}
+
+```
+
+### Remarks
+
+
+#### TO UPDATE DONATION ITEM PICTURES API
+
+To update Donation Item pictures
+
+### Prerequisites
+There is no Prerequistes for this API
+
+### HTTP Request
+
+```
+/irrc/update_donation_item_pictures
+```
+
+### Request headers
+
+| Name | Value |
+|:-----|:------|
+|Content-Type|application/json|
+|TOKEN|aqsw3sakskwj32kj3k2j33j2j3k23kj2k3j|
+
+### Multi-Part Request body
+
+| Parameter | Type | Description |
+|:----------|:-----|:------------|
+|donation_id|Integer|Request unique id for rejection |
+|attachment|File|Files to be uploaded |
+|attachment_deletes|Array|List of attachment Ids to be deleted |
+
+
+### Example
+
+##### Request
+
+```
+Dart Code
+
+var request = http.MultipartRequest('POST', Uri.parse('irrc/update_donation_item_pictures'));
+request.fields.addAll({
+  'donation_id': '95',
+  'attachment_deletes': '[813, 818]'
+});
+request.files.add(await http.MultipartFile.fromPath('attachment', '/Users/directory/Downloads/home.png'));
+
+```
+
+##### Response
+
+```
+{
+  "result": {
+    "meta": {
+      "status": true,
+      "message": "Attachments Uploaded Successfully!"
+    },
+    "data": {}
+  }
+}
+
+```
+
+### Remarks
+
+
+
+#### TO GET DONATION PRODUCT LIST API
+
+To get Donation product list
+
+### Prerequisites
+There is no Prerequistes for this API
+
+### HTTP Request
+
+```
+/irrc/get_donations_products_list
+```
+
+### Request headers
+
+| Name | Value |
+|:-----|:------|
+|Content-Type|application/json|
+|TOKEN|aqsw3sakskwj32kj3k2j33j2j3k23kj2k3j|
+
+### Request body
+
+| Parameter | Type | Description |
+|:----------|:-----|:------------|
+|donation_id|Integer|Request unique id for rejection |
+
+
+### Example
+
+##### Request
+
+```
+{
+  "params": {
+    "donation_id": 1
+  }
+}
+
+```
+
+##### Response
+
+```
+{
+    "jsonrpc": "2.0",
+    "id": null,
+    "result": {
+        "meta": {
+            "status": true,
+            "message": ""
+        },
+        "data": {
+            "products_list": [
+                {
+                    "product_id": 23,
+                    "product_name": "[HS00001] Kettle"
+                },
+                {
+                    "product_id": 37,
+                    "product_name": "[HS00002] Umbrella"
+                }
+            ]
+        },
+        "error": {}
+    }
+}
+
+```
+
+### Remarks
+
 
 
 ### TO UPDATE DONATION ITEM DATA API
@@ -2565,9 +2851,9 @@ There is no Prerequistes for this API
 |reviewers_remarks|String|Reviewers remarks for donation|
 |logistic_mode_key|String|Logistic mode key for donation|
 |collection_point_id|Integer|Collection point unique Id for donation|
-|tag_ids|Array|Cancel reason for donation|
-Optional Parameter
-|donation_id|Integer|Request unique id for rejection |
+|tag_ids|Array| Selection for new or high value |
+|donation_id|Integer|Donation unique id |
+|value|Integer|Donation amount |
 
 
 ### Example
@@ -2584,6 +2870,7 @@ Optional Parameter
             2
         ],
         "donation_qty": 2,
+        "value": 0,
         "reviewers_remarks": "test review remarks",
         "logistic_mode_key": "drop_off",
         "collection_point_id": 2
