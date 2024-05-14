@@ -2516,7 +2516,7 @@ There is no Prerequistes for this API
 
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
-|donation_id|Integer|Request unique id for rejection |
+|donation_id|Integer|Donation unique id for rejection |
 |reviewers_remarks|String|Reviewers rejection remark|
 
 
@@ -2581,7 +2581,7 @@ There is no Prerequistes for this API
 
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
-|donation_id|Integer|Request unique id for cancel |
+|donation_id|Integer|Donation unique id for cancelletion |
 |cancel_reason|String|Cancel reason for donation|
 
 
@@ -2644,7 +2644,7 @@ There is no Prerequistes for this API
 
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
-|donation_id|Integer|Request unique id for rejection |
+|donation_id|Integer|Donation unique id |
 
 
 ### Example
@@ -2709,7 +2709,7 @@ There is no Prerequistes for this API
 
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
-|donation_id|Integer|Request unique id for rejection |
+|donation_id|Integer|Donation unique id  |
 |attachment|File|Files to be uploaded |
 |attachment_deletes|Array|List of attachment Ids to be deleted |
 
@@ -2773,7 +2773,7 @@ There is no Prerequistes for this API
 
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
-|donation_id|Integer|Request unique id for rejection |
+|donation_id|Integer|Donation unique id|
 
 
 ### Example
