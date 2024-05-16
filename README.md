@@ -24,6 +24,8 @@ https://api.postman.com/collections/15976179-ded2f6f7-77ab-4d81-abba-aecdbb04b3c
      - [Cancel Specific Item](#to-cancel-specific-request-item-api)
      - [Item Availability](#to-get-request-item-availablilty-api)
      - [Collection Point List](#to-get-collection-point-details-api)
+     - [Fulfillment Mode List](#to-get-collection-point-details-api)
+     - [Request Tag List](#to-get-collection-point-details-api)
      - [Request Beneficiary](#to-update-request-beneficiary-api)
      - [Update Item Data](#to-update-request-item-data-api)
 - [Contact Person API](#contact-person-api)
@@ -39,6 +41,8 @@ https://api.postman.com/collections/15976179-ded2f6f7-77ab-4d81-abba-aecdbb04b3c
      - [Get donation item pictures](#to-get-donation-item-pictures-api)
      - [Update Donation item pictures](#to-update-donation-item-pictures-api)
      - [List Of donation products](#to-get-donation-product-list-api)
+     - [Donation Tag List](#to-get-collection-point-details-api)
+     - [Donation Logistic Mode List](#to-get-collection-point-details-api)
      - [Reject Specific donation](#to-reject-specific-donation-api)
      - [Cancel Specific donation](#to--cancel-specific-donation-api)
      - [Update donation item data](#to-update-donation-item-data-api)
@@ -1492,6 +1496,219 @@ There is no Prerequistes for this API
 ### Remarks
 
 
+### TO GET COLLECTION POINT DETAILS API
+
+Get Collection Point Values.
+
+### Prerequisites
+There is no Prerequistes for this API
+
+### HTTP Request
+
+```
+/irrc/get_collection_point_details
+```
+
+### Request headers
+
+| Name | Value |
+|:-----|:------|
+|Content-Type|application/json|
+|TOKEN|aqsw3sakskwj32kj3k2j33j2j3k23kj2k3j|
+
+### Request body
+
+| Parameter | Type | Description |
+|:----------|:-----|:------------|
+
+
+### Example
+
+##### Request
+
+```
+{
+    "params": {}
+}
+
+```
+
+##### Response
+
+```
+{
+    "jsonrpc": "2.0",
+    "id": null,
+    "result": {
+        "meta": {
+            "status": true,
+            "message": ""
+        },
+        "data": {
+            "collection_points_list": [
+                {
+                    "id": 1,
+                    "name": "HQ"
+                },
+                {
+                    "id": 2,
+                    "name": "Tampines Grande"
+                },
+                {
+                    "id": 3,
+                    "name": "InspIRRe Store"
+                }
+            ]
+        }
+    }
+}
+```
+
+### Remarks
+
+
+### TO GET REQUEST TAGS API
+
+Get Request tag list.
+
+### Prerequisites
+There is no Prerequistes for this API
+
+### HTTP Request
+
+```
+/irrc/get_requests_tags_list
+```
+
+### Request headers
+
+| Name | Value |
+|:-----|:------|
+|Content-Type|application/json|
+|TOKEN|aqsw3sakskwj32kj3k2j33j2j3k23kj2k3j|
+
+### Request body
+
+| Parameter | Type | Description |
+|:----------|:-----|:------------|
+
+
+### Example
+
+##### Request
+
+```
+{
+    "params": {}
+}
+
+```
+
+##### Response
+
+```
+{
+    "jsonrpc": "2.0",
+    "id": null,
+    "result": {
+        "meta": {
+            "status": true,
+            "message": ""
+        },
+        "data": {
+            "tags_list": [
+                {
+                    "id": 1,
+                    "name": "New"
+                },
+                {
+                    "id": 2,
+                    "name": "Used"
+                },
+                {
+                    "id": 3,
+                    "name": "Refurbished"
+                }
+            ]
+        }
+    }
+}
+```
+
+### Remarks
+
+
+### TO GET REQUEST FULFILLMENT MODE LIST API
+
+Get Fulfillment mode list.
+
+### Prerequisites
+There is no Prerequistes for this API
+
+### HTTP Request
+
+```
+/irrc/get_requests_fulfillment_mode
+```
+
+### Request headers
+
+| Name | Value |
+|:-----|:------|
+|Content-Type|application/json|
+|TOKEN|aqsw3sakskwj32kj3k2j33j2j3k23kj2k3j|
+
+### Request body
+
+| Parameter | Type | Description |
+|:----------|:-----|:------------|
+
+
+### Example
+
+##### Request
+
+```
+{
+    "params": {}
+}
+
+```
+
+##### Response
+
+```
+{
+    "jsonrpc": "2.0",
+    "id": null,
+    "result": {
+        "meta": {
+            "status": true,
+            "message": ""
+        },
+        "data": {
+            "fulfillment_mode_list": [
+                {
+                    "fulfillment_mode_key": "collection_point",
+                    "fulfillment_mode": "Collection Point"
+                },
+                {
+                    "fulfillment_mode_key": "warehouse_collection",
+                    "fulfillment_mode": "Warehouse Collection"
+                },
+                {
+                    "fulfillment_mode_key": "deliver_to_beneficiary",
+                    "fulfillment_mode": "Deliver to Beneficiary"
+                }
+            ]
+        }
+    }
+}
+```
+
+### Remarks
+
+
 ### TO UPDATE REQUEST BENEFICIARY API
 
 To Update Request Beneficiary Data.
@@ -2550,6 +2767,148 @@ There is no Prerequistes for this API
     }
 }
 
+```
+
+### Remarks
+
+
+### TO GET DONATION LOGISTIC MODE API
+
+Get Donations Logistic Mode values.
+
+### Prerequisites
+There is no Prerequistes for this API
+
+### HTTP Request
+
+```
+/irrc/get_donations_logistic_mode
+```
+
+### Request headers
+
+| Name | Value |
+|:-----|:------|
+|Content-Type|application/json|
+|TOKEN|aqsw3sakskwj32kj3k2j33j2j3k23kj2k3j|
+
+### Request body
+
+| Parameter | Type | Description |
+|:----------|:-----|:------------|
+
+Body is passed empty as shown below.
+
+
+### Example
+
+##### Request
+
+```
+{
+    "params": {}
+}
+
+```
+
+##### Response
+
+```
+{
+    "jsonrpc": "2.0",
+    "id": null,
+    "result": {
+        "meta": {
+            "status": true,
+            "message": ""
+        },
+        "data": {
+            "logistic_mode_list": [
+                {
+                    "logistic_mode_key": "drop_off",
+                    "logistic_mode": "Drop-Off Center"
+                },
+                {
+                    "logistic_mode_key": "irr",
+                    "logistic_mode": "IRR Collect"
+                },
+                {
+                    "logistic_mode_key": "donor",
+                    "logistic_mode": "Donor Deliver"
+                }
+            ]
+        }
+    }
+}
+```
+
+### Remarks
+
+
+### TO GET DONATION TAG LIST API
+
+To Get Donations Tags Values
+
+### Prerequisites
+There is no Prerequistes for this API
+
+### HTTP Request
+
+```
+/irrc/get_donations_tags_list
+```
+
+### Request headers
+
+| Name | Value |
+|:-----|:------|
+|Content-Type|application/json|
+|TOKEN|aqsw3sakskwj32kj3k2j33j2j3k23kj2k3j|
+
+### Request body
+
+| Parameter | Type | Description |
+|:----------|:-----|:------------|
+
+Body is passed empty as shown below.
+
+
+### Example
+
+##### Request
+
+```
+{
+    "params": {}
+}
+
+```
+
+##### Response
+
+```
+{
+    "jsonrpc": "2.0",
+    "id": null,
+    "result": {
+        "meta": {
+            "status": true,
+            "message": ""
+        },
+        "data": {
+            "tags_list": [
+                {
+                    "id": 1,
+                    "name": "High Value"
+                },
+                {
+                    "id": 2,
+                    "name": "New"
+                }
+            ]
+        }
+    }
+}
 ```
 
 ### Remarks
