@@ -33,6 +33,7 @@ https://api.postman.com/collections/15976179-ded2f6f7-77ab-4d81-abba-aecdbb04b3c
      - [List of Person Title](#to-get-contact-person-title-api)
      - [List of Countries](#to-get-person-country-api)
      - [List of Languages](#to-get-person-languages-api)
+     - [List of Person Tags](#to-get-person-tag-data-api)
      - [Update Contact Person](#to-update-contact-person-data-api)
      - [Encrypted API](#encrypted-api-requests)
           - [Beneficiary Details](#to-get-contact-person-title-api)
@@ -2164,7 +2165,7 @@ Body is passed Empty as shown below.
 ### Remarks
 
 
-### TO UPDATE REQUEST ITEM DATA API
+### TO GET PERSON TAG DATA API
 
 To Get Contact Person Tag Values.
 
