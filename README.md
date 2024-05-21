@@ -1,6 +1,6 @@
 # IRRC Mobile API Documentation
 
-NOTE : ALL THE REQUESTS ARE POST REQUESTS (HTTP POST)
+### NOTE : ALL THE REQUESTS ARE POST REQUESTS (HTTP POST)
 
 Postman Collection :
 ```
@@ -26,6 +26,7 @@ https://api.postman.com/collections/15976179-ded2f6f7-77ab-4d81-abba-aecdbb04b3c
      - [Collection Point List](#to-get-collection-point-details-api)
      - [Fulfillment Mode List](#to-get-request-fulfillment-mode-list-api)
      - [Request Tag List](#to-get-request-tags-api)
+     - [Request Status List](#to-get-request-status-api)
      - [Request Beneficiary](#to-update-request-beneficiary-api)
      - [Update Item Data](#to-update-request-item-data-api)
 - [Contact Person API](#contact-person-api)
@@ -42,6 +43,8 @@ https://api.postman.com/collections/15976179-ded2f6f7-77ab-4d81-abba-aecdbb04b3c
      - [Update Donation item pictures](#to-update-donation-item-pictures-api)
      - [List Of donation products](#to-get-donation-product-list-api)
      - [Donation Tag List](#to-get-donation-tag-list-api)
+     - [Donation Status List](#to-get-donation-status-list-api)
+     - [Donation Condition List](#to-get-donation-condition-list-api)
      - [Donation Logistic Mode List](#to-get-donation-logistic-mode-api)
      - [Reject Specific donation](#to-reject-specific-donation-api)
      - [Cancel Specific donation](#to--cancel-specific-donation-api)
@@ -587,6 +590,7 @@ In the request URL, provide the following query parameters with values.
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
 |keyword_search|String|Search keyword for filteration of data|
+|state_key|String|Status key for filteration of data based on Status|
 |page|Integer|Page number for data paging|
 |limit|Integer|Page Data limit for data paging|
 
@@ -598,6 +602,7 @@ In the request URL, provide the following query parameters with values.
 {
   "params": {
     "keyword_search": "",
+    "state_key": "review",
     "page": 2,
     "limit": 10
   }
@@ -812,6 +817,7 @@ In the request URL, provide the following query parameters with values.
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
 |keyword_search|String|Search keyword for filteration of data|
+|state_key|String|Status key for filteration of data based on Status|
 |page|Integer|Page number for data paging|
 |limit|Integer|Page Data limit for data paging|
 
@@ -823,6 +829,7 @@ In the request URL, provide the following query parameters with values.
 {
   "params": {
     "keyword_search": "",
+    "state_key": "review",
     "page": 2,
     "limit": 2
   }
@@ -981,6 +988,7 @@ In the request URL, provide the following query parameters with values.
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
 |keyword_search|String|Search keyword for filteration of data|
+|state_key|String|Status key for filteration of data based on Status|
 |page|Integer|Page number for data paging|
 |limit|Integer|Page Data limit for data paging|
 
@@ -992,6 +1000,7 @@ In the request URL, provide the following query parameters with values.
 {
   "params": {
     "keyword_search": "",
+    "state_key": "review",
     "page": 2,
     "limit": 2
   }
@@ -1496,77 +1505,6 @@ There is no Prerequistes for this API
 ### Remarks
 
 
-### TO GET COLLECTION POINT DETAILS API
-
-Get Collection Point Values.
-
-### Prerequisites
-There is no Prerequistes for this API
-
-### HTTP Request
-
-```
-/irrc/get_collection_point_details
-```
-
-### Request headers
-
-| Name | Value |
-|:-----|:------|
-|Content-Type|application/json|
-|TOKEN|aqsw3sakskwj32kj3k2j33j2j3k23kj2k3j|
-
-### Request body
-
-| Parameter | Type | Description |
-|:----------|:-----|:------------|
-
-
-### Example
-
-##### Request
-
-```
-{
-    "params": {}
-}
-
-```
-
-##### Response
-
-```
-{
-    "jsonrpc": "2.0",
-    "id": null,
-    "result": {
-        "meta": {
-            "status": true,
-            "message": ""
-        },
-        "data": {
-            "collection_points_list": [
-                {
-                    "id": 1,
-                    "name": "HQ"
-                },
-                {
-                    "id": 2,
-                    "name": "Tampines Grande"
-                },
-                {
-                    "id": 3,
-                    "name": "InspIRRe Store"
-                }
-            ]
-        }
-    }
-}
-```
-
-### Remarks
-
-
 ### TO GET REQUEST TAGS API
 
 Get Request tag list.
@@ -1628,6 +1566,98 @@ There is no Prerequistes for this API
                 {
                     "id": 3,
                     "name": "Refurbished"
+                }
+            ]
+        }
+    }
+}
+```
+
+### Remarks
+
+
+
+### TO GET REQUEST STATUS API
+
+Get Request status list.
+
+### Prerequisites
+There is no Prerequistes for this API
+
+### HTTP Request
+
+```
+/irrc/get_request_status_list
+```
+
+### Request headers
+
+| Name | Value |
+|:-----|:------|
+|Content-Type|application/json|
+|TOKEN|aqsw3sakskwj32kj3k2j33j2j3k23kj2k3j|
+
+### Request body
+
+| Parameter | Type | Description |
+|:----------|:-----|:------------|
+
+
+### Example
+
+##### Request
+
+```
+{
+    "params": {}
+}
+
+```
+
+##### Response
+
+```
+{
+    "jsonrpc": "2.0",
+    "id": null,
+    "result": {
+        "meta": {
+            "status": true,
+            "message": ""
+        },
+        "data": {
+            "status_list": [
+                {
+                    "state_key": "new",
+                    "state": "New"
+                },
+                {
+                    "state_key": "review",
+                    "state": "Review"
+                },
+                {
+                    "state_key": "reject",
+                    "state": "Reject"
+                },
+                {
+                    "state_key": "in_queue",
+                    "state": "In Queue"
+                },
+                {
+                    "state_key": "ready_to_process",
+                    "state": "Ready to Process"
+                },
+                {
+                    "state_key": "processing",
+                    "state": "Processing"
+                },
+                {
+                    "state_key": "fulfilled",
+                    "state": "Fulfilled"
+                },
+                {
+                    "state_key": "cancel",
+                    "state": "Cancelled"
                 }
             ]
         }
@@ -1834,9 +1864,11 @@ There is no Prerequistes for this API
 |fulfillment_mode_key|Integer|Fulfillment Mode key used for item|
 |reviewers_remarks|Integer|Reviewers remarks for Item|
 |is_eligible|Boolean|Item eligibility|
-|collection_appt|DATETIME|Collection Date for item|
+|collection_appt|DATETIME|Collection Date for item (UTC Datetime in String)|
 |collection_point_id|Integer|Collection point unique id for Collection identification|
 |request_id|Integer|Request unique id for Item eligibility|
+|eligibility_conditions|String|Eligiblility condition|
+|eligibility_criteria_line|Array|Array of Eligilibility condition question, response & remarks|
 
 
 
@@ -1858,8 +1890,24 @@ There is no Prerequistes for this API
         "reviewers_remarks": "test review remarks",
         "is_eligible": false,
         "collection_appt": "17/05/2024 11:35:59",
-        "collection_point_id": 2
+        "collection_point_id": 2,
+        "eligibility_conditions": "test conditions",
+        "eligibility_criteria_line": [
+            {
+                "eligibility_criteria_line_id": 2,
+                "question": "Question 1",
+                "response": "Response 1",
+                "remarks": "Remark 1"
+            },
+            {
+                "eligibility_criteria_line_id": 4,
+                "question": "Question 2",
+                "response": "Response 2",
+                "remarks": "Remark 2"
+            }
+        ]
     }
+}
 }
 
 ```
@@ -2645,6 +2693,7 @@ There is no Prerequistes for this API
 {
   "params": {
     "keyword_search": "",
+    "state_key": "accept",
     "page": 2,
     "limit": 2
   }
@@ -2914,6 +2963,179 @@ Body is passed empty as shown below.
 ### Remarks
 
 
+### TO GET DONATION STATUS LIST API
+
+Get Donations Status Values
+
+### Prerequisites
+There is no Prerequistes for this API
+
+### HTTP Request
+
+```
+/irrc/get_donation_status_list
+```
+
+### Request headers
+
+| Name | Value |
+|:-----|:------|
+|Content-Type|application/json|
+|TOKEN|aqsw3sakskwj32kj3k2j33j2j3k23kj2k3j|
+
+### Request body
+
+| Parameter | Type | Description |
+|:----------|:-----|:------------|
+
+Body is passed empty as shown below.
+
+
+### Example
+
+##### Request
+
+```
+{
+    "params": {}
+}
+
+```
+
+##### Response
+
+```
+{
+    "jsonrpc": "2.0",
+    "id": null,
+    "result": {
+        "meta": {
+            "status": true,
+            "message": ""
+        },
+        "data": {
+            "status_list": [
+                {
+                    "state_key": "new",
+                    "state": "New"
+                },
+                {
+                    "state_key": "review",
+                    "state": "Review"
+                },
+                {
+                    "state_key": "partial_reject",
+                    "state": "Partial Rejected"
+                },
+                {
+                    "state_key": "accept",
+                    "state": "Accepted"
+                },
+                {
+                    "state_key": "reject",
+                    "state": "Rejected"
+                },
+                {
+                    "state_key": "partial_disburse",
+                    "state": "Partial Disbursed"
+                },
+                {
+                    "state_key": "fully_disburse",
+                    "state": "Fully Disbursed"
+                },
+                {
+                    "state_key": "cancel",
+                    "state": "Cancelled"
+                }
+            ]
+        }
+    }
+}
+
+```
+
+### Remarks
+
+
+### TO GET DONATION CONDITION LIST API
+
+Get Donations Conditions Values
+
+### Prerequisites
+There is no Prerequistes for this API
+
+### HTTP Request
+
+```
+/irrc/get_donation_conditions_list
+```
+
+### Request headers
+
+| Name | Value |
+|:-----|:------|
+|Content-Type|application/json|
+|TOKEN|aqsw3sakskwj32kj3k2j33j2j3k23kj2k3j|
+
+### Request body
+
+| Parameter | Type | Description |
+|:----------|:-----|:------------|
+
+Body is passed empty as shown below.
+
+
+### Example
+
+##### Request
+
+```
+{
+    "params": {}
+}
+
+```
+
+##### Response
+
+```
+{
+    "jsonrpc": "2.0",
+    "id": null,
+    "result": {
+        "meta": {
+            "status": true,
+            "message": ""
+        },
+        "data": {
+            "conditions_list": [
+                {
+                    "condition_key": "new",
+                    "condition": "New"
+                },
+                {
+                    "condition_key": "mint",
+                    "condition": "Mint"
+                },
+                {
+                    "condition_key": "good",
+                    "condition": "Good"
+                },
+                {
+                    "condition_key": "average",
+                    "condition": "average"
+                },
+                {
+                    "condition_key": "poor",
+                    "condition": "Poor"
+                }
+            ]
+        }
+    }
+}
+```
+
+### Remarks
 
 
 #### TO  CANCEL SPECIFIC DONATION API
@@ -3210,6 +3432,7 @@ There is no Prerequistes for this API
 |reviewers_remarks|String|Reviewers remarks for donation|
 |logistic_mode_key|String|Logistic mode key for donation|
 |collection_point_id|Integer|Collection point unique Id for donation|
+|collection_appt|DateTime|Collection appointment date based on collection point option (UTC Date time in String)|
 |tag_ids|Array| Selection for new or high value |
 |donation_id|Integer|Donation unique id |
 |value|Integer|Donation amount |
@@ -3233,6 +3456,7 @@ There is no Prerequistes for this API
         "reviewers_remarks": "test review remarks",
         "logistic_mode_key": "drop_off",
         "collection_point_id": 2
+        "collection_appt": "17/05/2024 11:35:59",
     }
 }
 
