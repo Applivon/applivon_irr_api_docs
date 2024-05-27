@@ -1868,7 +1868,6 @@ There is no Prerequistes for this API
 |collection_appt|DATETIME|Collection Date for item (UTC Datetime in String)|
 |collection_point_id|Integer|Collection point unique id for Collection identification|
 |request_id|Integer|Request unique id for Item eligibility|
-|eligibility_conditions|String|Eligiblility condition|
 |eligibility_criteria_line|Array|Array of Eligilibility condition question, response & remarks|
 
 
@@ -1892,7 +1891,6 @@ There is no Prerequistes for this API
         "is_eligible": false,
         "collection_appt": "17/05/2024 11:35:59",
         "collection_point_id": 2,
-        "eligibility_conditions": "test conditions",
         "eligibility_criteria_line": [
             {
                 "eligibility_criteria_line_id": 2,
@@ -3437,6 +3435,7 @@ There is no Prerequistes for this API
 |tag_ids|Array| Selection for new or high value |
 |donation_id|Integer|Donation unique id |
 |value|Integer|Donation amount |
+|condition_key|String|Condition key for recieved from get_donation_conditions_list API|
 
 
 ### Example
@@ -3458,6 +3457,7 @@ There is no Prerequistes for this API
         "logistic_mode_key": "drop_off",
         "collection_point_id": 2
         "collection_appt": "17/05/2024 11:35:59",
+        "condition_key":"mint"
     }
 }
 
@@ -3489,16 +3489,24 @@ Errors will be tracked & traced down in the Error node in the API Response.
 
 ```
 {
-    "jsonrpc": "2.0",
-    "id": null,
-    "result": {
-        "meta": {
-            "status": false,
-            "message": ""
-        },
-        "data": {}
-         error: {}
+  "jsonrpc": "2.0",
+  "id": null,
+  "result": {
+    "meta": {
+      "status": false,
+      "message": ""
+    },
+    "data": {},
+    "error": {
+      "status_code": 400,
+      "errors": [
+        {
+          "reason": "badRequest",
+          "message": u"Request Item Record Not found!"
+        }
+      ]
     }
+  }
 }
 
 ```
