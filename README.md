@@ -3376,7 +3376,7 @@ There is no Prerequistes for this API
 ```
 {
   "params": {
-    "donation_id": 95
+    "donation_id": 6
   }
 }
 
@@ -3395,10 +3395,19 @@ There is no Prerequistes for this API
         },
         "data": {
             "attachments_list": [
-                "http://localhost:8704/web/content/813",
-                "http://localhost:8704/web/content/814"
+                {
+                    "donation_id": 6,
+                    "key": 809,
+                    "value": "http://188.166.215.73:17004/web/content/809"
+                },
+                {
+                    "donation_id": 6,
+                    "key": 808,
+                    "value": "http://188.166.215.73:17004/web/content/808"
+                }
             ]
-        }
+        },
+        "error": {}
     }
 }
 
