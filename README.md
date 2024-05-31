@@ -19,6 +19,7 @@ https://api.postman.com/collections/15976179-ded2f6f7-77ab-4d81-abba-aecdbb04b3c
 - [Request Module API](#request-module-api)
      - [Tangible Item List](#to-get-list-of-item-tangible-request-api)
      - [List Of Service request](#to-get-list-of-service-request-api)
+     - [Get Specific Item](#to-get-specific-request-item-api)
      - [Reject Specific Item](#to-reject-specific-request-item-api)
      - [Request Product List](#to-get-request-product-list-api)
      - [Cancel Specific Item](#to-cancel-specific-request-item-api)
@@ -40,6 +41,7 @@ https://api.postman.com/collections/15976179-ded2f6f7-77ab-4d81-abba-aecdbb04b3c
           - [Donor Details](#to-get-contact-person-title-api)
 - [Donation Module API](#donation-api)
      - [List Of donation](#to-get-list-of-donations-api)
+     - [Get donation details](#to-get-specific-donation-item-details-api)
      - [Get donation item pictures](#to-get-donation-item-pictures-api)
      - [Update Donation item pictures](#to-update-donation-item-pictures-api)
      - [List Of donation products](#to-get-donation-product-list-api)
@@ -591,7 +593,7 @@ In the request URL, provide the following query parameters with values.
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
 |keyword_search|String|Search keyword for filteration of data|
-|state_key|String|Status key for filteration of data based on Status|
+|state_key|Array|Array of Status keys for filteration of data|
 |page|Integer|Page number for data paging|
 |limit|Integer|Page Data limit for data paging|
 
@@ -603,7 +605,7 @@ In the request URL, provide the following query parameters with values.
 {
   "params": {
     "keyword_search": "",
-    "state_key": "review",
+    "state_key": ["review", "reject"],
     "page": 2,
     "limit": 10
   }
@@ -623,166 +625,175 @@ In the request URL, provide the following query parameters with values.
             "message": ""
         },
         "data": {
-            "total_pages": 28,
-            "total_count": 83,
-            "max_records_for_page": 3,
+            "total_pages": 3,
+            "total_count": 28,
+            "max_records_for_page": 10,
             "current_page": 2,
-            "count": 3,
+            "count": 10,
             "requests_list": [
                 {
-                    "request_id": 5,
+                    "request_id": 81,
                     "contact_id": -1,
                     "contact_name": "",
                     "contact_phone": "",
                     "contact_mobile": "",
                     "contact_email": "",
-                    "contact_street": "",
-                    "contact_street2": "",
-                    "contact_city": "",
-                    "contact_state_id": "",
-                    "contact_zip": "",
-                    "contact_country_id": "",
-                    "request_ref": "RQ24030003-01",
-                    "submission_date": "18/03/2024",
-                    "responsible_id": -1,
-                    "responsible_name": "",
-                    "is_eligible": false,
-                    "reviewers_remarks": "",
-                    "beneficiary_remarks": "",
-                    "category_id": 7,
-                    "category_name": "Mens Clothing",
-                    "request_qty": 10,
-                    "processed_qty": 0,
-                    "is_available": false,
-                    "is_allocated": false,
-                    "is_ready_to_process": false,
-                    "item_to_allocate_id": 13,
-                    "item_to_allocate_name": "T-Shirt",
-                    "fulfillment_mode_key": "",
-                    "fulfillment_mode": "",
-                    "collection_point_id": 3,
-                    "collection_point_name": "InspIRRe Store",
-                    "collection_point_details": "",
-                    "collection_appt": "",
-                    "eligibility_conditions": "eligibility conditions goes here",
-                    "eligibility_criteria_line": [
-                        {
-                            "eligibility_criteria_line_id": 128,
-                            "question": "question 1 goes here",
-                            "response": "",
-                            "reviewers_remarks": ""
-                        },
-                        {
-                            "eligibility_criteria_line_id": 129,
-                            "question": "question 3",
-                            "response": "",
-                            "reviewers_remarks": ""
-                        },
-                        {
-                            "eligibility_criteria_line_id": 130,
-                            "question": "question 2",
-                            "response": "",
-                            "reviewers_remarks": ""
-                        }
-                    ]
+                    "request_ref": "RQ24040042-02",
+                    "submission_date": "17/04/2024",
+                    "responsible_id": 10,
+                    "responsible_name": "Tiara Tan",
+                    "category_id": 8,
+                    "category_name": "Safety Clothes",
+                    "state_key": "review",
+                    "state": "Review"
                 },
                 {
-                    "request_id": 6,
+                    "request_id": 82,
                     "contact_id": -1,
                     "contact_name": "",
                     "contact_phone": "",
                     "contact_mobile": "",
                     "contact_email": "",
-                    "contact_street": "",
-                    "contact_street2": "",
-                    "contact_city": "",
-                    "contact_state_id": "",
-                    "contact_zip": "",
-                    "contact_country_id": "",
-                    "request_ref": "RQ24030004-01",
-                    "submission_date": "20/03/2024",
-                    "responsible_id": -1,
-                    "responsible_name": "",
-                    "is_eligible": false,
-                    "reviewers_remarks": "",
-                    "beneficiary_remarks": "",
-                    "category_id": 7,
-                    "category_name": "Mens Clothing",
-                    "request_qty": 10,
-                    "processed_qty": 10,
-                    "is_available": true,
-                    "is_allocated": false,
-                    "is_ready_to_process": false,
-                    "item_to_allocate_id": 13,
-                    "item_to_allocate_name": "T-Shirt",
-                    "fulfillment_mode_key": "collection_point",
-                    "fulfillment_mode": "Collection Point",
-                    "collection_point_id": 3,
-                    "collection_point_name": "InspIRRe Store",
-                    "collection_point_details": "",
-                    "collection_appt": "21/03/2024 06:00:00",
-                    "eligibility_conditions": "eligibility conditions goes here",
-                    "eligibility_criteria_line": [
-                        {
-                            "eligibility_criteria_line_id": 128,
-                            "question": "question 1 goes here",
-                            "response": "",
-                            "reviewers_remarks": ""
-                        },
-                        {
-                            "eligibility_criteria_line_id": 129,
-                            "question": "question 3",
-                            "response": "",
-                            "reviewers_remarks": ""
-                        },
-                        {
-                            "eligibility_criteria_line_id": 130,
-                            "question": "question 2",
-                            "response": "",
-                            "reviewers_remarks": ""
-                        }
-                    ]
+                    "request_ref": "RQ24040043-01",
+                    "submission_date": "17/04/2024",
+                    "responsible_id": 10,
+                    "responsible_name": "Tiara Tan",
+                    "category_id": 5,
+                    "category_name": "Laptops",
+                    "state_key": "review",
+                    "state": "Review"
                 },
                 {
-                    "request_id": 13,
+                    "request_id": 83,
                     "contact_id": -1,
                     "contact_name": "",
                     "contact_phone": "",
                     "contact_mobile": "",
                     "contact_email": "",
-                    "contact_street": "",
-                    "contact_street2": "",
-                    "contact_city": "",
-                    "contact_state_id": "",
-                    "contact_zip": "",
-                    "contact_country_id": "",
-                    "request_ref": "RQ24030004-02",
-                    "submission_date": "28/03/2024",
+                    "request_ref": "RQ24040043-02",
+                    "submission_date": "17/04/2024",
+                    "responsible_id": 10,
+                    "responsible_name": "Tiara Tan",
+                    "category_id": 12,
+                    "category_name": "Mobile Phone",
+                    "state_key": "review",
+                    "state": "Review"
+                },
+                {
+                    "request_id": 86,
+                    "contact_id": -1,
+                    "contact_name": "",
+                    "contact_phone": "",
+                    "contact_mobile": "",
+                    "contact_email": "",
+                    "request_ref": "RQ24040048-01",
+                    "submission_date": "19/04/2024",
+                    "responsible_id": 10,
+                    "responsible_name": "Tiara Tan",
+                    "category_id": 5,
+                    "category_name": "Laptops",
+                    "state_key": "review",
+                    "state": "Review"
+                },
+                {
+                    "request_id": 87,
+                    "contact_id": -1,
+                    "contact_name": "",
+                    "contact_phone": "",
+                    "contact_mobile": "",
+                    "contact_email": "",
+                    "request_ref": "RQ24040048-02",
+                    "submission_date": "19/04/2024",
                     "responsible_id": -1,
                     "responsible_name": "",
-                    "is_eligible": false,
-                    "reviewers_remarks": "",
-                    "beneficiary_remarks": "",
+                    "category_id": 7,
+                    "category_name": "Mens Clothing",
+                    "state_key": "review",
+                    "state": "Review"
+                },
+                {
+                    "request_id": 88,
+                    "contact_id": -1,
+                    "contact_name": "",
+                    "contact_phone": "",
+                    "contact_mobile": "",
+                    "contact_email": "",
+                    "request_ref": "RQ24040048-02",
+                    "submission_date": "19/04/2024",
+                    "responsible_id": 10,
+                    "responsible_name": "Tiara Tan",
+                    "category_id": 12,
+                    "category_name": "Mobile Phone",
+                    "state_key": "review",
+                    "state": "Review"
+                },
+                {
+                    "request_id": 93,
+                    "contact_id": -1,
+                    "contact_name": "",
+                    "contact_phone": "",
+                    "contact_mobile": "",
+                    "contact_email": "",
+                    "request_ref": "RQ24040046-01",
+                    "submission_date": "23/04/2024",
+                    "responsible_id": -1,
+                    "responsible_name": "",
                     "category_id": -1,
                     "category_name": "",
-                    "request_qty": 0,
-                    "processed_qty": 0,
-                    "is_available": false,
-                    "is_allocated": false,
-                    "is_ready_to_process": false,
-                    "item_to_allocate_id": -1,
-                    "item_to_allocate_name": "",
-                    "fulfillment_mode_key": "collection_point",
-                    "fulfillment_mode": "Collection Point",
-                    "collection_point_id": -1,
-                    "collection_point_name": "",
-                    "collection_point_details": "",
-                    "collection_appt": "",
-                    "eligibility_conditions": "eligibility conditions goes here",
-                    "eligibility_criteria_line": []
+                    "state_key": "review",
+                    "state": "Review"
+                },
+                {
+                    "request_id": 98,
+                    "contact_id": -1,
+                    "contact_name": "",
+                    "contact_phone": "",
+                    "contact_mobile": "",
+                    "contact_email": "",
+                    "request_ref": "RQ24040053-01",
+                    "submission_date": "29/04/2024",
+                    "responsible_id": -1,
+                    "responsible_name": "",
+                    "category_id": 12,
+                    "category_name": "Mobile Phone",
+                    "state_key": "review",
+                    "state": "Review"
+                },
+                {
+                    "request_id": 100,
+                    "contact_id": -1,
+                    "contact_name": "",
+                    "contact_phone": "",
+                    "contact_mobile": "",
+                    "contact_email": "",
+                    "request_ref": "RQ24040054-01",
+                    "submission_date": "29/04/2024",
+                    "responsible_id": -1,
+                    "responsible_name": "",
+                    "category_id": 4,
+                    "category_name": "Events",
+                    "state_key": "review",
+                    "state": "Review"
+                },
+                {
+                    "request_id": 102,
+                    "contact_id": -1,
+                    "contact_name": "",
+                    "contact_phone": "",
+                    "contact_mobile": "",
+                    "contact_email": "",
+                    "request_ref": "RQ24050004-01",
+                    "submission_date": "02/05/2024",
+                    "responsible_id": 10,
+                    "responsible_name": "Tiara Tan",
+                    "category_id": 10,
+                    "category_name": "Household",
+                    "state_key": "review",
+                    "state": "Review"
                 }
             ]
-        }
+        },
+        "error": {}
     }
 }
 ```
@@ -818,7 +829,7 @@ In the request URL, provide the following query parameters with values.
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
 |keyword_search|String|Search keyword for filteration of data|
-|state_key|String|Status key for filteration of data based on Status|
+|state_key|Array|Array of Status keys for filteration of data|
 |page|Integer|Page number for data paging|
 |limit|Integer|Page Data limit for data paging|
 
@@ -830,9 +841,9 @@ In the request URL, provide the following query parameters with values.
 {
   "params": {
     "keyword_search": "",
-    "state_key": "review",
+    "state_key": ["review", "reject"],
     "page": 2,
-    "limit": 2
+    "limit": 5
   }
 }
 
@@ -850,109 +861,95 @@ In the request URL, provide the following query parameters with values.
             "message": ""
         },
         "data": {
-            "total_pages": 21,
-            "total_count": 41,
-            "max_records_for_page": 2,
-            "current_page": 1,
-            "count": 2,
+            "total_pages": 6,
+            "total_count": 26,
+            "max_records_for_page": 5,
+            "current_page": 2,
+            "count": 5,
             "requests_list": [
                 {
-                    "request_id": 57,
+                    "request_id": 21,
                     "contact_id": -1,
                     "contact_name": "",
                     "contact_phone": "",
                     "contact_mobile": "",
                     "contact_email": "",
-                    "contact_street": "",
-                    "contact_street2": "",
-                    "contact_city": "",
-                    "contact_state_id": "",
-                    "contact_zip": "",
-                    "contact_country_id": "",
-                    "request_ref": "RQ24040031-01",
-                    "submission_date": "16/04/2024",
-                    "responsible_id": 10,
-                    "responsible_name": "Tiara Tan",
-                    "is_eligible": true,
-                    "reviewers_remarks": "",
-                    "beneficiary_remarks": "",
-                    "category_id": 8,
-                    "category_name": "Safety Clothes",
-                    "request_qty": 1,
-                    "processed_qty": 1,
-                    "is_available": true,
-                    "is_allocated": false,
-                    "is_ready_to_process": true,
-                    "item_to_allocate_id": 21,
-                    "item_to_allocate_name": "Safety Hat",
-                    "fulfillment_mode_key": "collection_point",
-                    "fulfillment_mode": "Collection Point",
-                    "collection_point_id": 3,
-                    "collection_point_name": "InspIRRe Store",
-                    "collection_point_details": "",
-                    "collection_appt": "",
-                    "eligibility_conditions": "eligibility conditions goes here",
-                    "eligibility_criteria_line": [
-                        {
-                            "eligibility_criteria_line_id": 128,
-                            "question": "question 1 goes here",
-                            "response": "",
-                            "reviewers_remarks": ""
-                        },
-                        {
-                            "eligibility_criteria_line_id": 129,
-                            "question": "question 3",
-                            "response": "",
-                            "reviewers_remarks": ""
-                        },
-                        {
-                            "eligibility_criteria_line_id": 130,
-                            "question": "question 2",
-                            "response": "",
-                            "reviewers_remarks": ""
-                        }
-                    ]
+                    "request_ref": "RQ24040004-01",
+                    "submission_date": "03/04/2024",
+                    "responsible_id": -1,
+                    "responsible_name": "",
+                    "category_id": 7,
+                    "category_name": "Mens Clothing",
+                    "state_key": "review",
+                    "state": "Review"
                 },
                 {
-                    "request_id": 58,
+                    "request_id": 63,
                     "contact_id": -1,
                     "contact_name": "",
                     "contact_phone": "",
                     "contact_mobile": "",
                     "contact_email": "",
-                    "contact_street": "",
-                    "contact_street2": "",
-                    "contact_city": "",
-                    "contact_state_id": "",
-                    "contact_zip": "",
-                    "contact_country_id": "",
-                    "request_ref": "RQ24040031-02",
+                    "request_ref": "RQ24040034-01",
                     "submission_date": "16/04/2024",
+                    "responsible_id": -1,
+                    "responsible_name": "",
+                    "category_id": -1,
+                    "category_name": "",
+                    "state_key": "review",
+                    "state": "Review"
+                },
+                {
+                    "request_id": 80,
+                    "contact_id": -1,
+                    "contact_name": "",
+                    "contact_phone": "",
+                    "contact_mobile": "",
+                    "contact_email": "",
+                    "request_ref": "RQ24040042-02",
+                    "submission_date": "17/04/2024",
                     "responsible_id": 10,
                     "responsible_name": "Tiara Tan",
-                    "is_eligible": true,
-                    "reviewers_remarks": "",
-                    "beneficiary_remarks": "",
-                    "category_id": 8,
-                    "category_name": "Safety Clothes",
-                    "request_qty": 1,
-                    "processed_qty": 1,
-                    "is_available": true,
-                    "is_allocated": false,
-                    "is_ready_to_process": true,
-                    "item_to_allocate_id": 7,
-                    "item_to_allocate_name": "Safety Shoes",
-                    "fulfillment_mode_key": "collection_point",
-                    "fulfillment_mode": "Collection Point",
-                    "collection_point_id": 3,
-                    "collection_point_name": "InspIRRe Store",
-                    "collection_point_details": "",
-                    "collection_appt": "",
-                    "eligibility_conditions": "eligibility conditions goes here",
-                    "eligibility_criteria_line": []
+                    "category_id": 12,
+                    "category_name": "Mobile Phone",
+                    "state_key": "review",
+                    "state": "Review"
+                },
+                {
+                    "request_id": 79,
+                    "contact_id": -1,
+                    "contact_name": "",
+                    "contact_phone": "",
+                    "contact_mobile": "",
+                    "contact_email": "",
+                    "request_ref": "RQ24040042-02",
+                    "submission_date": "17/04/2024",
+                    "responsible_id": -1,
+                    "responsible_name": "",
+                    "category_id": 7,
+                    "category_name": "Mens Clothing",
+                    "state_key": "review",
+                    "state": "Review"
+                },
+                {
+                    "request_id": 78,
+                    "contact_id": -1,
+                    "contact_name": "",
+                    "contact_phone": "",
+                    "contact_mobile": "",
+                    "contact_email": "",
+                    "request_ref": "RQ24040042-02",
+                    "submission_date": "17/04/2024",
+                    "responsible_id": 10,
+                    "responsible_name": "Tiara Tan",
+                    "category_id": 5,
+                    "category_name": "Laptops",
+                    "state_key": "review",
+                    "state": "Review"
                 }
             ]
-        }
+        },
+        "error": {}
     }
 }
 ```
@@ -989,7 +986,7 @@ In the request URL, provide the following query parameters with values.
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
 |keyword_search|String|Search keyword for filteration of data|
-|state_key|String|Status key for filteration of data based on Status|
+|state_key|Array|Array of Status keys for filteration of data|
 |page|Integer|Page number for data paging|
 |limit|Integer|Page Data limit for data paging|
 
@@ -1001,9 +998,9 @@ In the request URL, provide the following query parameters with values.
 {
   "params": {
     "keyword_search": "",
-    "state_key": "review",
-    "page": 2,
-    "limit": 2
+    "state_key": ["review", "reject"],
+    "page": 1,
+    "limit": 5
   }
 }
 
@@ -1021,114 +1018,159 @@ In the request URL, provide the following query parameters with values.
             "message": ""
         },
         "data": {
-            "total_pages": 21,
-            "total_count": 41,
-            "max_records_for_page": 2,
+            "total_pages": 1,
+            "total_count": 2,
+            "max_records_for_page": 5,
             "current_page": 1,
             "count": 2,
             "requests_list": [
                 {
-                    "request_id": 57,
-                    "contact_id": -1,
-                    "contact_name": "",
+                    "request_id": 117,
+                    "contact_id": 159,
+                    "contact_name": "Mr webform donation tester 1",
                     "contact_phone": "",
-                    "contact_mobile": "",
-                    "contact_email": "",
-                    "contact_street": "",
-                    "contact_street2": "",
-                    "contact_city": "",
-                    "contact_state_id": "",
-                    "contact_zip": "",
-                    "contact_country_id": "",
-                    "request_ref": "RQ24040031-01",
-                    "submission_date": "16/04/2024",
-                    "responsible_id": 10,
-                    "responsible_name": "Tiara Tan",
-                    "is_eligible": true,
-                    "reviewers_remarks": "",
-                    "beneficiary_remarks": "",
-                    "category_id": 8,
-                    "category_name": "Safety Clothes",
-                    "request_qty": 1,
-                    "processed_qty": 1,
-                    "is_available": true,
-                    "is_allocated": false,
-                    "is_ready_to_process": true,
-                    "item_to_allocate_id": 21,
-                    "item_to_allocate_name": "Safety Hat",
-                    "fulfillment_mode_key": "collection_point",
-                    "fulfillment_mode": "Collection Point",
-                    "collection_point_id": 3,
-                    "collection_point_name": "InspIRRe Store",
-                    "collection_point_details": "",
-                    "collection_appt": "",
-                    "eligibility_conditions": "eligibility conditions goes here",
-                    "eligibility_criteria_line": [
-                        {
-                            "eligibility_criteria_line_id": 128,
-                            "question": "question 1 goes here",
-                            "response": "",
-                            "reviewers_remarks": ""
-                        },
-                        {
-                            "eligibility_criteria_line_id": 129,
-                            "question": "question 3",
-                            "response": "",
-                            "reviewers_remarks": ""
-                        },
-                        {
-                            "eligibility_criteria_line_id": 130,
-                            "question": "question 2",
-                            "response": "",
-                            "reviewers_remarks": ""
-                        }
-                    ]
+                    "contact_mobile": "91866079",
+                    "contact_email": "marco.applivon@test.com",
+                    "request_ref": "RQ24050017",
+                    "submission_date": "07/05/2024",
+                    "responsible_id": 6,
+                    "responsible_name": "Jessie Lim",
+                    "category_id": 18,
+                    "category_name": "Inspirre Store Booking (4 May 10am - 2pm)",
+                    "state_key": "review",
+                    "state": "Review"
                 },
                 {
-                    "request_id": 58,
-                    "contact_id": -1,
-                    "contact_name": "",
+                    "request_id": 118,
+                    "contact_id": 160,
+                    "contact_name": "Mr webform donation tester 1",
                     "contact_phone": "",
-                    "contact_mobile": "",
-                    "contact_email": "",
-                    "contact_street": "",
-                    "contact_street2": "",
-                    "contact_city": "",
-                    "contact_state_id": "",
-                    "contact_zip": "",
-                    "contact_country_id": "",
-                    "request_ref": "RQ24040031-02",
-                    "submission_date": "16/04/2024",
-                    "responsible_id": 10,
-                    "responsible_name": "Tiara Tan",
-                    "is_eligible": true,
-                    "reviewers_remarks": "",
-                    "beneficiary_remarks": "",
-                    "category_id": 8,
-                    "category_name": "Safety Clothes",
-                    "request_qty": 1,
-                    "processed_qty": 1,
-                    "is_available": true,
-                    "is_allocated": false,
-                    "is_ready_to_process": true,
-                    "item_to_allocate_id": 7,
-                    "item_to_allocate_name": "Safety Shoes",
-                    "fulfillment_mode_key": "collection_point",
-                    "fulfillment_mode": "Collection Point",
-                    "collection_point_id": 3,
-                    "collection_point_name": "InspIRRe Store",
-                    "collection_point_details": "",
-                    "collection_appt": "",
-                    "eligibility_conditions": "eligibility conditions goes here",
-                    "eligibility_criteria_line": []
+                    "contact_mobile": "91866079",
+                    "contact_email": "marco.applivon@test.com",
+                    "request_ref": "RQ24050018",
+                    "submission_date": "07/05/2024",
+                    "responsible_id": 6,
+                    "responsible_name": "Jessie Lim",
+                    "category_id": 18,
+                    "category_name": "Inspirre Store Booking (4 May 10am - 2pm)",
+                    "state_key": "review",
+                    "state": "Review"
                 }
             ]
-        }
+        },
+        "error": {}
     }
 }
 ```
 
 ### Remarks
+
+
+### TO GET SPECIFIC REQUEST ITEM API
+
+To Get Specific Request Item
+
+### Prerequisites
+There is no Prerequistes for this API
+
+### HTTP Request
+
+```
+irrc/get_specific_request_items_details
+```
+
+### Request parameters
+
+In the request URL, provide the following query parameters with values.
+
+### Request headers
+
+| Name | Value |
+|:-----|:------|
+|Content-Type|application/json|
+|TOKEN|aqsw3sakskwj32kj3k2j33j2j3k23kj2k3j|
+
+### Request body
+
+| Parameter | Type | Description |
+|:----------|:-----|:------------|
+|request_id|Integer|Request unique id for request details |
+
+
+### Example
+
+##### Request
+
+```
+{
+  "params": {
+    "request_id": 93
+  }
+}
+
+```
+
+##### Response
+
+```
+{
+    "jsonrpc": "2.0",
+    "id": null,
+    "result": {
+        "meta": {
+            "status": true,
+            "message": ""
+        },
+        "data": {
+            "requests_details": {
+                "request_id": 93,
+                "contact_id": -1,
+                "contact_name": "",
+                "contact_phone": "",
+                "contact_mobile": "",
+                "contact_email": "",
+                "contact_street": "",
+                "contact_street2": "",
+                "contact_city": "",
+                "contact_state_id": "",
+                "contact_zip": "",
+                "contact_country_id": "",
+                "request_ref": "RQ24040046-01",
+                "submission_date": "23/04/2024",
+                "responsible_id": -1,
+                "responsible_name": "",
+                "is_eligible": true,
+                "reviewers_remarks": "",
+                "beneficiary_remarks": "",
+                "category_id": -1,
+                "category_name": "",
+                "request_qty": 1,
+                "processed_qty": 1,
+                "is_available": false,
+                "is_allocated": false,
+                "is_ready_to_process": false,
+                "item_to_allocate_id": -1,
+                "item_to_allocate_name": "",
+                "fulfillment_mode_key": "collection_point",
+                "fulfillment_mode": "Collection Point",
+                "state_key": "review",
+                "state": "Review",
+                "collection_point_id": 2,
+                "collection_point_name": "Tampines Grande",
+                "collection_point_details": "Open during office hours only:\nMon - Fri : 9am - 5pm",
+                "collection_appt": "",
+                "eligibility_conditions": "",
+                "eligibility_criteria_line": []
+            }
+        },
+        "error": {}
+    }
+}
+```
+
+### Remarks
+
+
 
 
 ### TO REJECT SPECIFIC REQUEST ITEM API
@@ -2681,6 +2723,7 @@ There is no Prerequistes for this API
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
 |keyword_search|String|Search keyword for filteration of data|
+|state_key|Array|Array of State keys to filter the data accordingly|
 |page|Integer|Page number for data paging|
 |limit|Integer|Page Data limit for data paging|
 
@@ -2692,7 +2735,7 @@ There is no Prerequistes for this API
 {
   "params": {
     "keyword_search": "",
-    "state_key": "accept",
+    "state_key": ["review", "accept"],
     "page": 2,
     "limit": 2
   }
@@ -2712,46 +2755,145 @@ There is no Prerequistes for this API
             "message": ""
         },
         "data": {
-            "total_pages": 2,
-            "total_count": 3,
+            "total_pages": 5,
+            "total_count": 9,
             "max_records_for_page": 2,
             "current_page": 2,
-            "count": 1,
+            "count": 2,
             "donations_list": [
                 {
-                    "donation_id": 68,
+                    "donation_id": 3,
                     "contact_id": 8,
                     "contact_name": "ABC Pte Ltd",
                     "contact_phone": "",
-                    "contact_mobile": "",
+                    "contact_mobile": "77776666",
                     "contact_email": "",
-                    "contact_street": "",
-                    "contact_street2": "",
-                    "contact_city": "",
-                    "contact_state_id": "",
-                    "contact_zip": "",
-                    "contact_country_id": "",
                     "donations_ref": "DI24050008-01",
                     "submission_date": "07/05/2024",
                     "responsible_id": 26,
                     "responsible_name": "John Doe",
-                    "reviewers_remarks": "",
-                    "donor_remarks": "",
                     "category_id": 7,
                     "category_name": "Mens Clothing",
-                    "product_id": 13,
-                    "product_name": "T-Shirt",
-                    "donation_qty": 3,
-                    "logistic_mode_key": "drop_off",
-                    "logistic_mode": "Drop-Off Center",
-                    "collection_point_id": 2,
-                    "collection_point_name": "Tampines Grande"
+                    "state_key": "accept",
+                    "state": "Accepted"
+                },
+                {
+                    "donation_id": 4,
+                    "contact_id": 8,
+                    "contact_name": "ABC Pte Ltd",
+                    "contact_phone": "",
+                    "contact_mobile": "77776666",
+                    "contact_email": "",
+                    "donations_ref": "DI24050008-02",
+                    "submission_date": "13/05/2024",
+                    "responsible_id": 6,
+                    "responsible_name": "Jessie Lim",
+                    "category_id": 5,
+                    "category_name": "Laptops",
+                    "state_key": "review",
+                    "state": "Review"
                 }
             ]
-        }
+        },
+        "error": {}
     }
 }
 ```
+### Remarks
+
+### TO GET SPECIFIC DONATION ITEM DETAILS API
+
+To get Specific Donation Item details
+
+### Prerequisites
+There is no Prerequistes for this API
+
+### HTTP Request
+
+```
+/irrc/get_specific_donation_items_details
+```
+
+### Request headers
+
+| Name | Value |
+|:-----|:------|
+|Content-Type|application/json|
+|TOKEN|aqsw3sakskwj32kj3k2j33j2j3k23kj2k3j|
+
+### Request body
+
+| Parameter | Type | Description |
+|:----------|:-----|:------------|
+|donation_id|Integer|Donation unique id for donation details |
+
+
+
+
+### Example
+
+##### Request
+
+```
+{
+  "params": {
+    "donation_id": 1
+  }
+}
+
+```
+
+##### Response
+
+```
+{
+    "jsonrpc": "2.0",
+    "id": null,
+    "result": {
+        "meta": {
+            "status": true,
+            "message": ""
+        },
+        "data": {
+            "donations_details": {
+                "donation_id": 1,
+                "contact_id": 154,
+                "contact_name": "Donor Mr Ali",
+                "contact_phone": "",
+                "contact_mobile": "99774455",
+                "contact_email": "mrali@donor.com",
+                "contact_street": "",
+                "contact_street2": "",
+                "contact_city": "",
+                "contact_state_id": "",
+                "contact_zip": "",
+                "contact_country_id": "",
+                "donations_ref": "DI24050006-01",
+                "submission_date": "06/05/2024",
+                "responsible_id": 6,
+                "responsible_name": "Jessie Lim",
+                "reviewers_remarks": "Excess Stock from warehouse. ",
+                "donor_remarks": "Received and checked. No issue.",
+                "category_id": 10,
+                "category_name": "Household",
+                "product_id": 37,
+                "product_name": "[HS00002] Umbrella",
+                "donation_qty": 4,
+                "logistic_mode_key": "irr",
+                "logistic_mode": "IRR Collect",
+                "state_key": "accept",
+                "state": "Accepted",
+                "collection_point_id": 2,
+                "collection_point_name": "Tampines Grande",
+                "collection_appt": ""
+            }
+        },
+        "error": {}
+    }
+}
+
+```
+
 ### Remarks
 
 
@@ -3507,6 +3649,33 @@ Errors will be tracked & traced down in the Error node in the API Response.
       ]
     }
   }
+}
+
+```
+
+### Example
+
+```
+
+{
+    "jsonrpc": "2.0",
+    "id": null,
+    "result": {
+        "meta": {
+            "status": false,
+            "message": ""
+        },
+        "data": {},
+        "error": {
+            "status_code": 404,
+            "errors": [
+                {
+                    "reason": "notFound",
+                    "message": "Donation Item Record Not found!"
+                }
+            ]
+        }
+    }
 }
 
 ```
