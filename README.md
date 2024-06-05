@@ -114,7 +114,7 @@ There is no Prerequistes for this API
   "params": {
     "encrypted_data": [
       "YOUR ENCRYTED BASE 64 DATA",
-      "16 bit IV Key generated during encryption"
+      "base64 of 16 bit IV Key generated during encryption"
     ]
   }
 }
@@ -127,7 +127,7 @@ There is no Prerequistes for this API
     "jsonrpc": "2.0",
     "id": null,
     "result": ["YOUR ENCRYTED BASE 64 DATA",
-        "16 bit IV Key generated during encryption"
+        "base64 of 16 bit IV Key generated during encryption"
     ]
 }
 
@@ -218,7 +218,7 @@ There is no Prerequistes for this API
   "params": {
     "encrypted_data": [
       "YOUR ENCRYTED BASE 64 DATA",
-      "16 bit IV Key generated during encryption"
+      "base64 of 16 bit IV Key generated during encryption"
     ]
   }
 }
@@ -231,7 +231,7 @@ There is no Prerequistes for this API
     "jsonrpc": "2.0",
     "id": null,
     "result": ["YOUR ENCRYTED BASE 64 DATA",
-        "16 bit IV Key generated during encryption"
+        "base64 of 16 bit IV Key generated during encryption"
     ]
 }
 
@@ -2408,7 +2408,7 @@ There is no Prerequistes for this API
   "params": {
     "encrypted_data": [
       "YOUR ENCRYTED BASE 64 DATA",
-      "16 bit IV Key generated during encryption"
+      "base64 of 16 bit IV Key generated during encryption"
     ]
   }
 }
@@ -2421,7 +2421,7 @@ There is no Prerequistes for this API
     "jsonrpc": "2.0",
     "id": null,
     "result": ["YOUR ENCRYTED BASE 64 DATA",
-        "16 bit IV Key generated during encryption"
+        "base64 of 16 bit IV Key generated during encryption"
     ]
 }
 ```
@@ -2577,7 +2577,7 @@ There is no Prerequistes for this API
   "params": {
     "encrypted_data": [
       "YOUR ENCRYTED BASE 64 DATA",
-      "16 bit IV Key generated during encryption"
+      "base64 of 16 bit IV Key generated during encryption"
     ]
   }
 }
@@ -2590,7 +2590,7 @@ There is no Prerequistes for this API
     "jsonrpc": "2.0",
     "id": null,
     "result": ["YOUR ENCRYTED BASE 64 DATA",
-        "16 bit IV Key generated during encryption"
+        "base64 of 16 bit IV Key generated during encryption"
     ]
 }
 ```
