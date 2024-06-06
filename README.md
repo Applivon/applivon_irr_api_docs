@@ -2874,6 +2874,12 @@ There is no Prerequistes for this API
                 "responsible_name": "Jessie Lim",
                 "reviewers_remarks": "Excess Stock from warehouse. ",
                 "donor_remarks": "Received and checked. No issue.",
+                "tag_ids": [
+                    {
+                        "id": 2,
+                        "name": "New"
+                    }
+                ],
                 "category_id": 10,
                 "category_name": "Household",
                 "product_id": 37,
@@ -3460,6 +3466,9 @@ request.fields.addAll({
 request.files.add(await http.MultipartFile.fromPath('attachment', '/Users/directory/Downloads/home.png'));
 
 ```
+
+<img width="902" alt="Screenshot 2024-06-06 at 10 34 42 AM" src="https://github.com/Applivon/applivon_irr_api_docs/assets/103477248/832da729-bc17-4c99-8b0b-ad1cda95143e">
+
 
 ##### Response
 
