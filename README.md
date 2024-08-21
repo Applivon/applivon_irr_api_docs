@@ -1395,9 +1395,9 @@ There is no Prerequistes for this API
 
 | Parameter | Type | Description |
 |:----------|:-----|:------------|
-Optional Parameter
-|request_id|Integer|Request item unique id for Item availability |
 
+|request_id|Integer|Request unique id |
+|item_to_allocate_id|Integer|Item id to check for Item availability|
 
 ### Example
 
@@ -1406,7 +1406,8 @@ Optional Parameter
 ```
 {
   "params": {
-    "request_id": 54
+    "request_id": 297,
+    "item_to_allocate_id":28
   }
 }
 
@@ -1426,35 +1427,43 @@ Optional Parameter
         "data": {
             "availability_info": [
                 {
-                    "location_id": 18,
+                    "location_id": 8,
                     "location_name": "Stock",
-                    "product_id": 37,
-                    "product_name": "Umbrella",
-                    "available_quantity": 1.0
-                },
-                {
-                    "location_id": 18,
-                    "location_name": "Stock",
-                    "product_id": 37,
-                    "product_name": "Umbrella",
-                    "available_quantity": 1.0
-                },
-                {
-                    "location_id": 18,
-                    "location_name": "Stock",
-                    "product_id": 37,
-                    "product_name": "Umbrella",
-                    "available_quantity": 1.0
+                    "product_id": 28,
+                    "product_name": "[PHN00002] SamSung Mobile",
+                    "available_quantity": 0
                 },
                 {
                     "location_id": 24,
                     "location_name": "Stock",
-                    "product_id": 37,
-                    "product_name": "Umbrella",
-                    "available_quantity": -1.0
+                    "product_id": 28,
+                    "product_name": "[PHN00002] SamSung Mobile",
+                    "available_quantity": 3.0
+                },
+                {
+                    "location_id": 8,
+                    "location_name": "Stock",
+                    "product_id": 28,
+                    "product_name": "[PHN00002] SamSung Mobile",
+                    "available_quantity": 8.0
+                },
+                {
+                    "location_id": 8,
+                    "location_name": "Stock",
+                    "product_id": 28,
+                    "product_name": "[PHN00002] SamSung Mobile",
+                    "available_quantity": 1.0
+                },
+                {
+                    "location_id": 8,
+                    "location_name": "Stock",
+                    "product_id": 28,
+                    "product_name": "[PHN00002] SamSung Mobile",
+                    "available_quantity": 1.0
                 }
             ]
-        }
+        },
+        "error": {}
     }
 }
 
